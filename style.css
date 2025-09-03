@@ -1,0 +1,49 @@
+body{
+    background: url("images/header.jpeg");
+    background-repeat: no-repeat;
+    background-color: #3B3B3B;
+}
+
+
+
+
+
+
+/*------------------ menu --------------------*/
+.menu a {
+    background-color: #1F1F1F;
+    color: #969696;
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    width: 90%;
+}
+
+.menu a:hover {
+    background-color: #3B3B3B;
+    color: #C4C4C4;
+}
+
+.menu a.active {
+    background-color: #3B3B3B;
+    color: white;
+}
+
+.menu {
+    float: left;
+    width: 10%;
+}
+
+/*--------------- artikelen ----------------*/
+article h1{
+    color: whitesmoke;
+}
+
+article p{
+    color: white;
+}
+article a {
+    color: #3B3B3B;
+    text-decoration: none;
+    font-weight: bold;
+}
