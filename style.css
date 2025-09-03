@@ -1,15 +1,13 @@
+/*------------------ basis --------------------*/
 body{
-    background: url("images/header.jpeg");
-    background-repeat: no-repeat;
+    background: url("images/background.jpeg");
     background-color: #3B3B3B;
+    background-size: 100%;
+    font-family: sans-serif;
 }
 
 
-
-
-
-
-/*------------------ menu --------------------*/
+/*------------------ menu ---------------------*/
 .menu a {
     background-color: #1F1F1F;
     color: #969696;
@@ -32,9 +30,25 @@ body{
 .menu {
     float: left;
     width: 10%;
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-/*--------------- artikelen ----------------*/
+/*------------------ vlakken ------------------*/
+header {
+    height: 5%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgba(31, 31, 31, 0.7);
+}
+
+header a{
+    margin: auto;
+}
+
+/*-----------opmaak artikelen -----------------*/
 article h1{
     color: whitesmoke;
 }
@@ -46,4 +60,34 @@ article a {
     color: #3B3B3B;
     text-decoration: none;
     font-weight: bold;
+}
+
+.base {
+    background-color:#1F1F1F;
+    width: 75%;
+    padding: 1%;
+    margin: auto;
+}
+
+h1, h2, p {
+    text-align: left;
+}
+
+/*--------------opmaak footer -----------------*/
+footer {
+    height: 50px;
+    
+    color: #C4C4C4;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #969696;
+}
+
+footer a:hover{
+    color: #C4C4C4;
 }
