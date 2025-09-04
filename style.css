@@ -13,7 +13,7 @@ body{
     color: #969696;
     display: block;
     text-decoration: none;
-    padding: 12px;
+    padding: 10%;
     width: 90%;
 }
 
@@ -29,13 +29,19 @@ body{
 
 .menu {
     float: left;
-    width: 10%;
-    padding: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 11%;
+    margin: 0;
+    padding: 0;
 }
 
 /*------------------ vlakken ------------------*/
+[class*="col-"] {
+    width: 100%
+}
+* {
+    box-sizing: border-box;
+}
+
 header {
     height: 5%;
     width: 100%;
@@ -69,17 +75,19 @@ article a {
     margin: auto;
 }
 
-h1, h2, p {
+h1, h2, h3, h4, p {
     text-align: left;
+    color: white;
 }
 
 /*--------------opmaak footer -----------------*/
 footer {
     height: 50px;
-    
     color: #C4C4C4;
     text-align: center;
     padding: 5px;
+    margin: auto;
+    padding: auto;
 }
 
 footer a{
@@ -90,4 +98,10 @@ footer a{
 
 footer a:hover{
     color: #C4C4C4;
+}
+
+main {
+    width: 100%;
+    margin: 0px;
+    background-color: #1f1f1f;
 }
