@@ -81,24 +81,7 @@ h1, h2, h3, h4, p {
 }
 
 /*--------------opmaak footer -----------------*/
-footer {
-    height: 50px;
-    color: #C4C4C4;
-    text-align: center;
-    padding: 5px;
-    margin: auto;
-    padding: auto;
-}
 
-footer a{
-    text-decoration: none;
-    font-weight: bold;
-    color: #969696;
-}
-
-footer a:hover{
-    color: #C4C4C4;
-}
 
 main {
     width: 100%;
