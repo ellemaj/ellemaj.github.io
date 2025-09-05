@@ -22,6 +22,8 @@ header {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 
 .menu a {
@@ -59,6 +61,39 @@ section {
     border-radius: 6px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     color: white;
+}
+
+/*--aside menu, dashboard --*/
+.dashboard_section {
+    margin-bottom: 20px;
+    background: #3B3B3B;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.side_menu {
+    width: 17.1%;
+    float: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    background-color: #1F1F1F;
+    color:white;
+}
+
+.side_menu a {
+    color:#969696;
+    text-decoration: none;
+    
+    text-align: left;
+}
+
+.side_menu a:hover{
+    background-color:#3B3B3B;
+    color:#C4C4C4;
 }
 
 /*--------------opmaak footer -----------------*/
