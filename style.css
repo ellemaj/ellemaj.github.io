@@ -32,6 +32,7 @@ header {
     padding: 15px;
     display: block;
     text-align: center;
+    position: sticky;
 }
 
 .menu a:hover {
@@ -87,8 +88,9 @@ section {
 .side_menu a {
     color:#969696;
     text-decoration: none;
-    
+    padding: 2px;
     text-align: left;
+    display: block;
 }
 
 .side_menu a:hover{
@@ -96,8 +98,29 @@ section {
     color:#C4C4C4;
 }
 
-/*--------------opmaak footer -----------------*/
+table, th, td {
+  border: 1px solid;
+}
 
+/*-------------------- FAQ --------------------*/
+details {
+    margin-bottom: 10px;
+    background:#969696;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details[open] summary {
+    color: #0073e6;
+}
+
+/*--------------opmaak footer -----------------*/
 footer {
     text-align: center;
     background-color: #333;
