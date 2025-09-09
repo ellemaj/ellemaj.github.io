@@ -1,5 +1,5 @@
 /*------------------ basis --------------------*/
-body{
+body {
     background: url("images/background.jpeg");
     background-color: #3B3B3B;
     background-size: 100%;
@@ -18,13 +18,14 @@ header {
 
 /*------------------- menu --------------------*/
 .menu {
-    position:sticky;
+    position: sticky;
     top: 0;
     background-color: #1F1F1F;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
 }
+
 .menu ul {
     list-style-type: none;
     padding: 0px;
@@ -50,7 +51,7 @@ header {
 
 .menu a.active {
     background-color: #3B3B3B;
-    color:white;
+    color: white;
 }
 
 /*------------------ vlakken ------------------*/
@@ -64,7 +65,7 @@ section {
     background: #3B3B3B;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     color: white;
 }
 
@@ -74,14 +75,18 @@ section {
     background: #3B3B3B;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     color: white;
-    table, th, td {
+
+    table,
+    th,
+    td {
         border: 1px solid #969696;
         text-align: center;
         padding: 10px;
         border-collapse: collapse;
     }
+
     table {
         width: 80%;
     }
@@ -93,31 +98,42 @@ section {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #1F1F1F;
-    color:white;
+    color: white;
 }
 
 .side_menu a {
-    color:#969696;
+    color: #969696;
     text-decoration: none;
     padding: 2px;
     text-align: left;
     display: block;
 }
 
-.side_menu a:hover{
-    background-color:#3B3B3B;
-    color:#C4C4C4;
+.side_menu a:hover {
+    background-color: #3B3B3B;
+    color: #C4C4C4;
+}
+
+.nbsa_grens {
+    td {
+        border: 3px solid #969696;
+    }
+    font-weight: bold;
+}
+
+.bezig {
+    background-color: #333;
 }
 
 /*-------------------- FAQ --------------------*/
 details {
     margin-bottom: 10px;
-    background:#969696;
+    background: #969696;
     border-radius: 8px;
     padding: 10px 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 summary {
@@ -126,7 +142,7 @@ summary {
 }
 
 details[open] summary {
-    color:#3B3B3B;
+    color: #3B3B3B;
 }
 
 /*--------------opmaak footer -----------------*/
@@ -142,12 +158,12 @@ footer {
 }
 
 footer a {
-    color:#C4C4C4;
+    color: #C4C4C4;
     text-decoration: none;
 }
 
 li a {
-    color:#C4C4C4;
+    color: #C4C4C4;
 }
 
 img {
