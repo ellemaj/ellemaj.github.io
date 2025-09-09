@@ -3,6 +3,7 @@ body{
     background: url("images/background.jpeg");
     background-color: #3B3B3B;
     background-size: 100%;
+    background-attachment: fixed;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -16,14 +17,22 @@ header {
 }
 
 /*------------------- menu --------------------*/
-.menu ul {
-    list-style-type: none;
-    background-color:#1F1F1F;
+.menu {
+    position:sticky;
+    top: 0;
+    background-color: #1F1F1F;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    position: sticky;
-    top: 0;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li {
+    float: left;
 }
 
 .menu a {
@@ -32,16 +41,11 @@ header {
     padding: 15px;
     display: block;
     text-align: center;
-    position: sticky;
 }
 
 .menu a:hover {
     background-color: #3B3B3B;
     color: #C4C4C4;
-}
-
-.menu li {
-    float: left;
 }
 
 .menu a.active {
@@ -64,7 +68,7 @@ section {
     color: white;
 }
 
-/*--aside menu, dashboard --*/
+/*----------------- dashboard -----------------*/
 .dashboard_section {
     margin-bottom: 20px;
     background: #3B3B3B;
@@ -72,6 +76,15 @@ section {
     border-radius: 6px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     color: white;
+    table, th, td {
+        border: 1px solid #969696;
+        text-align: center;
+        padding: 10px;
+        border-collapse: collapse;
+    }
+    table {
+        width: 80%;
+    }
 }
 
 .side_menu {
@@ -98,10 +111,6 @@ section {
     color:#C4C4C4;
 }
 
-table, th, td {
-  border: 1px solid;
-}
-
 /*-------------------- FAQ --------------------*/
 details {
     margin-bottom: 10px;
@@ -117,7 +126,7 @@ summary {
 }
 
 details[open] summary {
-    color: #0073e6;
+    color:#3B3B3B;
 }
 
 /*--------------opmaak footer -----------------*/
