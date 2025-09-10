@@ -79,7 +79,15 @@ section a:hover {
     font-weight: bold;
 }
 /*----------------- dashboard -----------------*/
+main.dashboard-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
 .dashboard_section {
+    order: 1;
+    flex: 1;
     margin-bottom: 20px;
     background: #3B3B3B;
     padding: 10px;
@@ -102,6 +110,9 @@ section a:hover {
 }
 
 .side_menu {
+    order: 2;
+    flex: 0 0 220px;
+    margin-left: auto;
     width: 17.1%;
     float: right;
     margin-bottom: 20px;
@@ -135,6 +146,30 @@ section a:hover {
 .bezig {
     background-color: #333;
 }
+
+@media (max-width: 768px) {
+  main.dashboard-layout {
+    flex-direction: column; /* zet alles onder elkaar */
+  }
+
+  .dashboard_section {
+    order: 1;        /* hoofdinhoud eerst */
+    width: 100%;     /* volle breedte */
+  }
+
+  .side_menu {
+    order: 2;        /* side menu eronder */
+    width: 100%;     /* ook volle breedte */
+    margin-left: 0;  /* geen rare ruimte */
+  }
+
+  .dashboard_section table {
+    display: block;       /* tabel kan scrollen */
+    overflow-x: auto;
+  }
+}
+
+
 
 /*-------------------- FAQ --------------------*/
 details {
