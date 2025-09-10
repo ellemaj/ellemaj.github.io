@@ -145,6 +145,64 @@ details[open] summary {
     color: #3B3B3B;
 }
 
+/*-------------------- Blog -------------------*/
+.feed {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background:#969696;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #1F1F1F;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.post-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.post-card h2 a {
+  text-decoration: none;
+  color:white;
+}
+
+.post-card h2 a:hover {
+  color: #3B3B3B;
+}
+
+.post-card time {
+  display: block;
+  font-size: 0.9rem;
+  color:#3B3B3B;
+  margin-bottom: 0.6rem;
+}
+
+.post-card p {
+  margin: 0;
+  color: white;
+}
+
+.lees-meer {
+  margin-left: 6px;
+  color: #3B3B3B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lees-meer:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+  .feed {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
 /*--------------opmaak footer -----------------*/
 footer {
     text-align: center;
