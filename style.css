@@ -42,6 +42,7 @@ header {
     padding: 15px;
     display: block;
     text-align: center;
+    transition: background-color 0.5s;
 }
 
 .menu a:hover {
@@ -69,6 +70,14 @@ section {
     color: white;
 }
 
+section a {
+    color:#C4C4C4;
+    text-decoration: none;
+}
+
+section a:hover {
+    font-weight: bold;
+}
 /*----------------- dashboard -----------------*/
 .dashboard_section {
     margin-bottom: 20px;
@@ -139,6 +148,7 @@ details {
 summary {
     cursor: pointer;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 details[open] summary {
@@ -167,6 +177,7 @@ details[open] summary {
 .post-card h2 a {
   text-decoration: none;
   color:white;
+  transition: color 0.3s;
 }
 
 .post-card h2 a:hover {
@@ -202,6 +213,23 @@ details[open] summary {
   }
 }
 
+.terug-knop {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #1F1F1F; /* blauw */
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.terug-knop:hover {
+  background-color: #C4C4C4;
+  color:#1F1F1F;
+  font-weight: 500;
+}
 
 /*--------------opmaak footer -----------------*/
 footer {
