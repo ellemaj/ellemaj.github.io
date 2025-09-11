@@ -276,3 +276,26 @@ footer a.active{
     font-weight: bold;
     color: white;
 }
+
+
+@media (max-width: 768px) {
+  main.dashboard-layout {
+    flex-direction: column; /* zet alles onder elkaar */
+  }
+
+  .dashboard_section {
+    order: 1;        /* hoofdinhoud eerst */
+    width: 100%;     /* volle breedte */
+  }
+
+  .side_menu {
+    order: 2;        /* side menu eronder */
+    width: 100%;     /* ook volle breedte */
+    margin-left: 0;  /* geen rare ruimte */
+  }
+
+  .dashboard_section table {
+    display: block;       /* tabel kan scrollen */
+    overflow-x: auto;
+  }
+}
