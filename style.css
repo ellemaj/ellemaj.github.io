@@ -78,6 +78,15 @@ section a {
 section a:hover {
     font-weight: bold;
 }
+
+li a {
+    color: #C4C4C4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 /*----------------- dashboard -----------------*/
 main.dashboard-layout {
     display: flex;
@@ -147,30 +156,6 @@ main.dashboard-layout {
     background-color: #333;
 }
 
-@media (max-width: 768px) {
-  main.dashboard-layout {
-    flex-direction: column; /* zet alles onder elkaar */
-  }
-
-  .dashboard_section {
-    order: 1;        /* hoofdinhoud eerst */
-    width: 100%;     /* volle breedte */
-  }
-
-  .side_menu {
-    order: 2;        /* side menu eronder */
-    width: 100%;     /* ook volle breedte */
-    margin-left: 0;  /* geen rare ruimte */
-  }
-
-  .dashboard_section table {
-    display: block;       /* tabel kan scrollen */
-    overflow-x: auto;
-  }
-}
-
-
-
 /*-------------------- FAQ --------------------*/
 details {
     margin-bottom: 10px;
@@ -194,6 +179,12 @@ details[open] summary {
 .feed {
   display: grid;
   gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .feed {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .post-card {
@@ -242,17 +233,11 @@ details[open] summary {
   text-decoration: underline;
 }
 
-@media (min-width: 800px) {
-  .feed {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .terug-knop {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.6rem 1rem;
-  background-color: #1F1F1F; /* blauw */
+  background-color: #1F1F1F;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -283,11 +268,11 @@ footer a {
     text-decoration: none;
 }
 
-li a {
-    color: #C4C4C4;
+footer a:hover {
+    font-weight: bold;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+footer a.active{
+    font-weight: bold;
+    color: white;
 }

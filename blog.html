@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <title>Blog</title>
     <meta charset="UTF-8">
+    <meta name="keywords" content="Website, HTML, CSS, HZ, HBO-ICT, ICT opleiding, Elmar, Blog, Posts">
+    <meta name="author" content="Elmar van Loenhout">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
@@ -12,31 +14,77 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="favicon/favicon_original.png" width="10%"></a>
+        <a href="index.html"><img src="favicon/favicon_original.png" width="10%" alt="Logo"></a>
     </header>
 
     <nav class="menu">
         <ul>
-            <li><a href = "index.html">Home</a></li>
-            <li><a href = "profile.html">Profile</a></li>
-            <li><a href = "dashboard.html">Dashboard</a></li>
-            <li><a href = "faq.html">FAQ</a></li>
-            <li><a href = "blog.html" class="active">Blog</a></li>
-            <li><a href = "post.html">Post</a></li>
-        </ul>      
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
     </nav>
 
     <main>
-        <section>
-            <h1>Blog</h1>
+        <section class="feed">
+            <article class="post-card">
+                <h2><a href="blog/post-swot_analysis.html">Persoonlijke SWOT analyse</a></h2>
+                <time datetime="2025-09-11">11 september 2025</time>
+                <p>
+                    Mijn persoonlijke SWOT analyse; wat zijn mijn sterke en zwakke punten tijdens de opleiding?
+                    <a href="blog/post-swot_analysis.html" class="lees-meer">lees meer…</a>
+                </p>
+            </article>
+
+            <article class="post-card">
+                <h2><a href="blog/post-ict.html">ICT-werkveld</a></h2>
+                <time datetime="2025-09-10">10 september 2025</time>
+                <p>
+                    Hoe ziet het ICT-werkveld er uit? Waar kom ik in terecht als ik deze opleiding afrond?
+                    <a href="blog/post-ict.html" class="lees-meer">lees meer…</a>
+                </p>
+            </article>
+
+            <article class="post-card">
+                <h2><a href="blog/post-feedback.html">Feedback</a></h2>
+                <time datetime="2025-09-10">10 september 2025</time>
+                <p>
+                    Welke feedback...?
+                    <a href="blog/post-feedback.html" class="lees-meer">lees meer…</a>
+                </p>
+            </article>
+
+            <article class="post-card">
+                <h2><a href="blog/post-programming_experience.html">Mijn programmeerervaring</a></h2>
+                <time datetime="2025-09-09">9 september 2025</time>
+                <p>
+                    Zoals ik op de home- en profilepage al heb verteld, heb ik al enige codeer en programmeerervaring.
+                    <a href="blog/post-programming_experience.html" class="lees-meer">lees meer…</a>
+                </p>
+            </article>
+
+            <article class="post-card">
+                <h2><a href="blog/post-studiekeuze.html">Studiekeuze & motivatie</a></h2>
+                <time datetime="2024-11-20">20 november 2024</time>
+                <p>
+                    De studie waarvoor ik heb gekozen, en waarom ik hiervoor heb gekozen.
+                    <a href="blog/post-studiekeuze.html" class="lees-meer">lees meer…</a>
+                </p>
+            </article>
         </section>
 
+
     </main>
-        
+
     <footer>
         <p>&copy; 2025 | Elmar van Loenhout |
-        <a href="mailto:loen0029@hz.nl">Contact</a></p>
+            <a href="mailto:loen0029@hz.nl">Contact</a> |
+            <a href="sitemap.html">Sitemap</a>
+        </p>
     </footer>
 
 </body>
+
 </html>
