@@ -156,6 +156,56 @@ main.dashboard-layout {
     background-color: #333;
 }
 
+@media (max-width: 768px) {
+  main.dashboard-layout {
+    flex-direction: column; /* zet alles onder elkaar */
+  }
+
+  .dashboard_section {
+    order: 1;        /* hoofdinhoud eerst */
+    width: 100%;     /* volle breedte */
+  }
+
+  .side_menu {
+    order: 2;        /* side menu eronder */
+    width: 100%;     /* ook volle breedte */
+    margin-left: 0;  /* geen rare ruimte */
+  }
+
+  .dashboard_section table {
+    display: block;       /* tabel kan scrollen */
+    overflow-x: auto;
+  }
+}
+
+/*--Progress bar--*/
+.progress-bar {
+    position: relative;
+    width: 100%;
+    background-color:#C4C4C4; /* grijze achtergrond */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50; /* groene voortgang */
+    width: 0%;  /*pas aantal % aan op percentage behaalde EC!*/
+    transition: width 0.5s ease;
+}
+
+/* NBSA-marker */
+.nbsa-marker {
+    position: absolute;
+    left: 75%; /* 45 / 60 = 0.75 → 75% */
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: red; /* streepje voor NBSA */
+}
+
 /*-------------------- FAQ --------------------*/
 details {
     margin-bottom: 10px;
@@ -275,27 +325,4 @@ footer a:hover {
 footer a.active{
     font-weight: bold;
     color: white;
-}
-
-
-@media (max-width: 768px) {
-  main.dashboard-layout {
-    flex-direction: column; /* zet alles onder elkaar */
-  }
-
-  .dashboard_section {
-    order: 1;        /* hoofdinhoud eerst */
-    width: 100%;     /* volle breedte */
-  }
-
-  .side_menu {
-    order: 2;        /* side menu eronder */
-    width: 100%;     /* ook volle breedte */
-    margin-left: 0;  /* geen rare ruimte */
-  }
-
-  .dashboard_section table {
-    display: block;       /* tabel kan scrollen */
-    overflow-x: auto;
-  }
 }
