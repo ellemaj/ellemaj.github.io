@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   updateProgress();
-
-  // Als je invoervelden gebruikt (<input class="grade-input">), update live
   document.addEventListener("input", updateProgress);
 });
 
@@ -15,42 +13,53 @@ function updateProgress() {
 
   rows.forEach((row) => {
     const cells = row.querySelectorAll("td");
-    if (cells.length >= 5) {
-      const ecValue = parseFloat(cells[2].textContent);
-      const gradeCell = cells[4];
-      const gradeInput = gradeCell.querySelector(".grade-input");
+    if (cells.length < 4) return; // sla lege rijen over
 
-      // Haal het cijfer op: uit de cel of uit het inputveld
-      let grade = null;
-      if (gradeInput) {
-        grade = parseFloat(gradeInput.value);
-      } else {
-        grade = parseFloat(gradeCell.textContent.replace(",", "."));
+    // Bepaal kolomindexen afhankelijk van rowspan (bloknummer)
+    let vakIndex, ecIndex, cijferIndex;
+
+    if (cells.length === 5) {
+      // Rij mét bloknummer
+      vakIndex = 1;
+      ecIndex = 2;
+      cijferIndex = 4;
+    } else {
+      // Rij zonder bloknummer (onder rowspan)
+      vakIndex = 0;
+      ecIndex = 1;
+      cijferIndex = 3;
+    }
+
+    const ecValue = parseFloat(cells[ecIndex].textContent.replace(",", "."));
+    const gradeCell = cells[cijferIndex];
+    const gradeInput = gradeCell.querySelector(".grade-input");
+
+    let grade = null;
+    if (gradeInput) {
+      grade = parseFloat(gradeInput.value);
+    } else {
+      grade = parseFloat(gradeCell.textContent.replace(",", "."));
+    }
+
+    // Reset kleur (behalve bloknummer)
+    for (let i = vakIndex; i < cells.length; i++) {
+      cells[i].classList.remove("behaald", "onvoldoende");
+    }
+
+    if (!isNaN(grade) && grade >= 5.5) {
+      totalEC += ecValue;
+      for (let i = vakIndex; i < cells.length; i++) {
+        cells[i].classList.add("behaald");
       }
-
-      // Eerst alle oude kleuren verwijderen
-      for (let i = 1; i < cells.length; i++) {
-        cells[i].classList.remove("behaald", "onvoldoende");
-        cells[i].style.backgroundColor = "";
-        cells[i].style.color = "";
-      }
-
-      // Controleer of het cijfer geldig is
-      if (!isNaN(grade) && grade >= 5.5) {
-        totalEC += ecValue;
-        for (let i = 1; i < cells.length; i++) {
-          cells[i].classList.add("behaald");
-        }
-      } else if (!isNaN(grade)) {
-        for (let i = 1; i < cells.length; i++) {
-          cells[i].classList.add("onvoldoende");
-        }
+    } else if (!isNaN(grade)) {
+      for (let i = vakIndex; i < cells.length; i++) {
+        cells[i].classList.add("onvoldoende");
       }
     }
   });
 
   // Update voortgangsbalk
-  const percentage = (totalEC / maxEC) * 100;
+  const percentage = Math.min((totalEC / maxEC) * 100, 100);
   progressBar.style.width = `${percentage}%`;
 
   // Update tekst

@@ -71,7 +71,7 @@ section {
 }
 
 section a {
-    color:rgb(37, 150, 190);
+    color: rgb(37, 150, 190);
     text-decoration: underline;
 }
 
@@ -93,8 +93,8 @@ details {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-details:hover summary{
-  color:#3B3B3B;
+details:hover summary {
+    color: #3B3B3B;
 }
 
 summary {
@@ -111,7 +111,7 @@ details[open] summary {
 footer {
     text-align: center;
     background-color: #1F1F1F;
-    color:#2596be;
+    color: #2596be;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
@@ -120,7 +120,7 @@ footer {
 }
 
 footer a {
-    color:#2581be;
+    color: #2581be;
     text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ footer a:hover {
     font-weight: bold;
 }
 
-footer a.active{
+footer a.active {
     font-weight: bold;
     color: white;
 }
