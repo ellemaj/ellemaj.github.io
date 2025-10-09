@@ -32,18 +32,21 @@
 
     <main>
         <aside class="side_menu">
-            <h4>Handige links</h4>
+            <h3>Handige links</h3>
             <ul>
-                <li><a href="https://oer.hz.nl/9b1081fb-c060-4091-bb2b-ae39ccf8456a" target="_blank">HBO-ICT CER</a></li>
+                <li><a href="https://oer.hz.nl/9b1081fb-c060-4091-bb2b-ae39ccf8456a" target="_blank">HBO-ICT CER</a>
+                </li>
                 <li><a href="https://oer.hz.nl/93eee6aa-2bc1-454c-a56a-f8b56c62ba9f" target="_blank">HBO-ICT IR</a></li>
-                <li><a href="https://learn.hz.nl/course/view.php?id=23602#section-0" target="_blank">Learn - PCO</a></li>
+                <li><a href="https://learn.hz.nl/course/view.php?id=23602#section-0" target="_blank">Learn - PCO</a>
+                </li>
                 <li><a href="https://hz.osiris-student.nl/voortgang" target="_blank">Study Progess (Osiris)</a></li>
                 <li><a href="https://github.com/HZ-HBO-ICT" target="_blank">GitHub-omgeving HBO-ICT</a></li>
             </ul>
         </aside>
         <section class="dashboard-layout">
             <section class="dashboard_section">
-                <h1>Dashboard</h1><a href="https://hz.nl" target="_blank"><img src="images/hzlogo_groot.png" width="300" alt="HZ logo"></a>
+                <h1>Dashboard</h1><a href="https://hz.nl" target="_blank"><img src="images/hzlogo_groot.png" width="300"
+                        alt="HZ logo"></a>
                 <h2>Overzicht van jaar 1:</h2>
                 <table>
                     <tr>
@@ -53,6 +56,8 @@
                         <th>Examen</th>
                         <th>Cijfer</th>
                     </tr>
+
+                    <!-- Je hoeft alleen maar het cijfer in te vullen, via dashboard.js berekend het script het aantal EC en update de progress bar-->
                     <!-- Blok 1 -->
                     <tr class="bezig">
                         <td rowspan="3">1</td>
@@ -73,6 +78,7 @@
                         <td>Casustoets</td>
                         <td>-</td>
                     </tr>
+                    
                     <!-- Blok 2 -->
                     <tr>
                         <td rowspan="2">2</td>
@@ -86,6 +92,7 @@
                         <td>Schriftelijke Kennistoets</td>
                         <td>-</td>
                     </tr>
+
                     <!--blok 3-->
                     <tr>
                         <td rowspan="4">3</td>
@@ -110,6 +117,7 @@
                         <td>Video</td>
                         <td>-</td>
                     </tr>
+
                     <!--blok 4-->
                     <tr>
                         <td rowspan="3">4</td>
@@ -127,14 +135,6 @@
                         <td>2.5</td>
                         <td>Individueel Project Assessment</td>
                         <td>-</td>
-                    </tr>
-                    <!--NBSA grens-->
-                    <tr rowspan="4" class="nbsa_grens">
-                        <td>NBSA-grens</td>
-                        <td></td>
-                        <td>= 45</td>
-                        <td></td>
-                        <td></td>
                     </tr>
 
                     <!--Door het jaar heen-->
@@ -176,7 +176,7 @@
                     <div class="progress"></div>
                     <div class="nbsa-marker"></div>
                 </div>
-                <p>0 / 60 EC behaald</p>
+                <p>0 / 60 EC behaald</p> <!-- bij invullen van cijfer in de td, wordt deze tekst automatisch aangepast-->
             </section>
         </section>
 

@@ -1,7 +1,14 @@
+// Laad confetti-bibliotheek in
+const confettiScript = document.createElement("script");
+confettiScript.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
+document.head.appendChild(confettiScript);
+
 document.addEventListener("DOMContentLoaded", () => {
   updateProgress();
   document.addEventListener("input", updateProgress);
 });
+
+let confettiShown = false; // voorkomt dat het meerdere keren afgaat
 
 function updateProgress() {
   const rows = document.querySelectorAll(".dashboard_section table tr");
@@ -10,6 +17,7 @@ function updateProgress() {
 
   let totalEC = 0;
   const maxEC = 60;
+  const nbsaGrens = 45; // 75% van 60 EC
 
   rows.forEach((row) => {
     const cells = row.querySelectorAll("td");
@@ -64,4 +72,37 @@ function updateProgress() {
 
   // Update tekst
   ecText.textContent = `${totalEC.toFixed(1)} / ${maxEC} EC behaald`;
+
+  // Check NBSA en start confetti
+  if (totalEC >= nbsaGrens && !confettiShown) {
+    startConfetti();
+    confettiShown = true; // slechts één keer tonen
+  }
+}
+
+// 🎉 Confetti functie --> zodra ik genoeg EC heb om over de NBSA grens te zitten, komt er confetti op het scherm!
+function startConfetti() {
+  const duration = 5 * 1000; // 5 seconden
+  const end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 8,
+      angle: 70,
+      spread: 100,
+      startVelocity: 45,
+      origin: { x: 0, y: 0.6 }
+    });
+    confetti({
+      particleCount: 8,
+      angle: 110,
+      spread: 100,
+      startVelocity: 45,
+      origin: { x: 1, y: 0.6 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
 }
